@@ -67,17 +67,13 @@
             border: 1px solid #e0e0e0;
             transition: all 0.3s ease;
         }
-        .question.correct {
-            background: #e8f5e9;
-            border-color: #4caf50;
-        }
         .question-text {
             font-weight: bold;
             color: #333;
             margin-bottom: 10px;
         }
         .grade {
-            display: none; /* إخفاء مربع الدرجة لكل سؤال */
+            display: none;
             background: #4caf50;
             color: white;
             padding: 3px 8px;
@@ -125,20 +121,25 @@
             margin-left: 10px;
             accent-color: #4facfe;
         }
-        .choices label:has(input:checked) {
-            background: #4facfe;
-            color: white;
-            border-color: #4facfe;
+        .choices label.correct {
+            background: #c8e6c9 !important;
+            border-color: #4caf50 !important;
         }
-        .choices label.correct-answer {
-            background: #4caf50 !important;
-            color: white !important;
-            border-color: #388e3c !important;
-        }
-        .choices label.correct-answer::before {
-            content: "✅ ";
-            margin-right: 5px;
+        .choices label.correct::before {
+            content: "✅";
+            color: #4caf50;
             font-weight: bold;
+            margin-right: 8px;
+        }
+        .choices label.incorrect {
+            background: #ffcdd2 !important;
+            border-color: #f44336 !important;
+        }
+        .choices label.incorrect::before {
+            content: "❌";
+            color: #f44336;
+            font-weight: bold;
+            margin-right: 8px;
         }
         textarea {
             resize: vertical;
@@ -304,9 +305,7 @@
                         <label><input type="radio" name="q1a1" value="أعالي"> أعالي</label>
                         <label><input type="radio" name="q1a1" value="أخاذ"> أخاذ</label>
                     </div>
-                    <div class="explanation" id="q1a1-explanation">
-                        الإجابة الصحيحة هي "أندر" لأن كلمة "أوفر وأكثر" تعني "أكثر وفرة"، ومضادها هو "أندر" أي "أقل وفرة".
-                    </div>
+                    <div class="explanation" id="q1a1-explanation">الإجابة الصحيحة هي "أندر".</div>
                     <p>2- كلمة تكون جمع تكسير:</p>
                     <div class="choices" id="q1a2-choices">
                         <label><input type="radio" name="q1a2" value="الكائنات"> الكائنات</label>
@@ -314,9 +313,7 @@
                         <label><input type="radio" name="q1a2" value="الأغصان"> الأغصان</label>
                         <label><input type="radio" name="q1a2" value="ورقات"> ورقات</label>
                     </div>
-                    <div class="explanation" id="q1a2-explanation">
-                        الإجابة الصحيحة هي "الأغصان" لأنها جمع تكسير لكلمة "غصن".
-                    </div>
+                    <div class="explanation" id="q1a2-explanation">الإجابة الصحيحة هي "الأغصان".</div>
                 </div>
                 <div class="question" id="q1b-container">
                     <div class="question-text">ب- بماذا يتميز طائر الياقوت كما ورد في الفقرة الأولى؟ <span class="grade">نصف درجة</span></div>
@@ -326,9 +323,7 @@
                         <label><input type="radio" name="q1b" value="سرعته في الطيران"> سرعته في الطيران</label>
                         <label><input type="radio" name="q1b" value="حجمه الكبير"> حجمه الكبير</label>
                     </div>
-                    <div class="explanation" id="q1b-explanation">
-                        الإجابة الصحيحة هي "ريشه اللامع الملون" كما ورد في الفقرة الأولى: "يتميز بريشه اللامع الذي يتلألأ بألوان قوس قزح".
-                    </div>
+                    <div class="explanation" id="q1b-explanation">الإجابة الصحيحة هي "ريشه اللامع الملون".</div>
                 </div>
                 <div class="question" id="q1c-container">
                     <div class="question-text">ت- ما التهديدات التي تواجه طائر الياقوت وتعرضه للانقراض – الفقرة الثانية؟ <span class="grade">درجة</span></div>
@@ -338,9 +333,7 @@
                         <label><input type="radio" name="q1c" value="نقص الغذاء فقط"> نقص الغذاء فقط</label>
                         <label><input type="radio" name="q1c" value="الأمراض المعدية"> الأمراض المعدية</label>
                     </div>
-                    <div class="explanation" id="q1c-explanation">
-                        الإجابة الصحيحة هي "قطع الأشجار والصيد غير المشروع" كما ورد في الفقرة الثانية.
-                    </div>
+                    <div class="explanation" id="q1c-explanation">الإجابة الصحيحة هي "قطع الأشجار والصيد غير المشروع".</div>
                 </div>
                 <div class="question" id="q1d-container">
                     <div class="question-text">ث- ما الفكرة الجزئية التي تحدثت عنها الفقرة الثانية؟ <span class="grade">درجتان</span></div>
@@ -350,9 +343,7 @@
                         <label><input type="radio" name="q1d" value="غذاء طائر الياقوت"> غذاء طائر الياقوت</label>
                         <label><input type="radio" name="q1d" value="موطن طائر الياقوت"> موطن طائر الياقوت</label>
                     </div>
-                    <div class="explanation" id="q1d-explanation">
-                        الإجابة الصحيحة هي "التهديدات التي تواجه طائر الياقوت" لأن الفقرة الثانية تتحدث عن التهديدات مثل قطع الأشجار والصيد غير المشروع.
-                    </div>
+                    <div class="explanation" id="q1d-explanation">الإجابة الصحيحة هي "التهديدات التي تواجه طائر الياقوت".</div>
                 </div>
                 <div class="question" id="q1e-container">
                     <div class="question-text">ج- كيف يمكن الحفاظ على طائر الياقوت وحماية بيئته؟ <span class="grade">درجتان</span></div>
@@ -362,9 +353,7 @@
                         <label><input type="radio" name="q1e" value="تربيته في المنازل"> تربيته في المنازل</label>
                         <label><input type="radio" name="q1e" value="تغيير نوع غذائه"> تغيير نوع غذائه</label>
                     </div>
-                    <div class="explanation" id="q1e-explanation">
-                        الإجابة الصحيحة هي "حماية الغابات ومنع الصيد" لأن ذلك يحمي بيئته الطبيعية ويوقف الصيد غير المشروع.
-                    </div>
+                    <div class="explanation" id="q1e-explanation">الإجابة الصحيحة هي "حماية الغابات ومنع الصيد".</div>
                 </div>
             </div>
             <!-- القسم الثاني: النصوص الأدبية -->
@@ -388,9 +377,7 @@
                         <label><input type="radio" name="q2a" value="رسول"> رسول</label>
                         <label><input type="radio" name="q2a" value="إرسال"> إرسال</label>
                     </div>
-                    <div class="explanation" id="q2a-explanation">
-                        الإجابة الصحيحة هي "رسالة" لأن مفرد "رسائل" هو "رسالة".
-                    </div>
+                    <div class="explanation" id="q2a-explanation">الإجابة الصحيحة هي "رسالة".</div>
                 </div>
                 <div class="question" id="q2b-container">
                     <div class="question-text">ب- ما مرادف (الرعاية): <span class="grade">نصف درجة</span></div>
@@ -400,9 +387,7 @@
                         <label><input type="radio" name="q2b" value="الرفض"> الرفض</label>
                         <label><input type="radio" name="q2b" value="التجاهل"> التجاهل</label>
                     </div>
-                    <div class="explanation" id="q2b-explanation">
-                        الإجابة الصحيحة هي "الاهتمام" لأن "الرعاية" تعني العناية والاهتمام.
-                    </div>
+                    <div class="explanation" id="q2b-explanation">الإجابة الصحيحة هي "الاهتمام".</div>
                 </div>
                 <div class="question" id="q2c-container">
                     <div class="question-text">ت- ورد في البيت الثامن موطن جمالي. اذكره؟ <span class="grade">درجة</span></div>
@@ -412,9 +397,7 @@
                         <label><input type="radio" name="q2c" value="الجناس بين الكلمات"> الجناس بين الكلمات</label>
                         <label><input type="radio" name="q2c" value="التشبيه في البيت"> التشبيه في البيت</label>
                     </div>
-                    <div class="explanation" id="q2c-explanation">
-                        الإجابة الصحيحة هي "تضاد بين الرحيل والإقامة" لأنهما متضادان في المعنى.
-                    </div>
+                    <div class="explanation" id="q2c-explanation">الإجابة الصحيحة هي "تضاد بين الرحيل والإقامة".</div>
                 </div>
                 <div class="question" id="q2d-container">
                     <div class="question-text">ث- ما الجوائز التي خبأها سليمان عليه السلام في رسائله. اذكر اثنتين؟ <span class="grade">درجتان</span></div>
@@ -424,9 +407,7 @@
                         <label><input type="radio" name="q2d" value="طعام وشراب"> طعام وشراب</label>
                         <label><input type="radio" name="q2d" value="قصر وخدم"> قصر وخدم</label>
                     </div>
-                    <div class="explanation" id="q2d-explanation">
-                        الإجابة الصحيحة هي "تاج للحمامة ورياض في تهامة" كما ورد في الأبيات.
-                    </div>
+                    <div class="explanation" id="q2d-explanation">الإجابة الصحيحة هي "تاج للحمامة ورياض في تهامة".</div>
                 </div>
                 <div class="question" id="q2e-container">
                     <div class="question-text">ج- ما نصيحتك للشخص الذي يخون الأمانة ولا يحافظ عليها؟ <span class="grade">درجتان</span></div>
@@ -436,9 +417,7 @@
                         <label><input type="radio" name="q2e" value="أن يخفي الأمانة"> أن يخفي الأمانة</label>
                         <label><input type="radio" name="q2e" value="أن يبيع الأمانة"> أن يبيع الأمانة</label>
                     </div>
-                    <div class="explanation" id="q2e-explanation">
-                        الإجابة الصحيحة هي "أن يتقي الله ويحافظ على الأمانة" لأن الأمانة واجب ديني وأخلاقي.
-                    </div>
+                    <div class="explanation" id="q2e-explanation">الإجابة الصحيحة هي "أن يتقي الله ويحافظ على الأمانة".</div>
                 </div>
             </div>
             <!-- القسم الثالث: النحو والصرف -->
@@ -457,9 +436,7 @@
                         <label><input type="radio" name="q3a1" value="واسعة"> واسعة</label>
                         <label><input type="radio" name="q3a1" value="فيها"> فيها</label>
                     </div>
-                    <div class="explanation" id="q3a1-explanation">
-                        الإجابة الصحيحة هي "يلعب" لأنه فعل مضارع معرب.
-                    </div>
+                    <div class="explanation" id="q3a1-explanation">الإجابة الصحيحة هي "يلعب".</div>
                     <p>2- مبتدأ مرفوع:</p>
                     <div class="choices" id="q3a2-choices">
                         <label><input type="radio" name="q3a2" value="الحديقةُ"> الحديقةُ</label>
@@ -467,9 +444,7 @@
                         <label><input type="radio" name="q3a2" value="يلعب"> يلعب</label>
                         <label><input type="radio" name="q3a2" value="الأطفال"> الأطفال</label>
                     </div>
-                    <div class="explanation" id="q3a2-explanation">
-                        الإجابة الصحيحة هي "الحديقةُ" لأنها مبتدأ مرفوع وعلامة رفعه الضمة.
-                    </div>
+                    <div class="explanation" id="q3a2-explanation">الإجابة الصحيحة هي "الحديقةُ".</div>
                 </div>
                 <div class="question" id="q3b-container">
                     <div class="question-text">أ- الحركات التي تكون في آخر الكلمة المعربة تسمى: <span class="grade">نصف درجة</span></div>
@@ -479,9 +454,7 @@
                         <label><input type="radio" name="q3b" value="علامات البناء"> علامات البناء</label>
                         <label><input type="radio" name="q3b" value="أقسام الكلام"> أقسام الكلام</label>
                     </div>
-                    <div class="explanation" id="q3b-explanation">
-                        الإجابة الصحيحة هي "علامات الإعراب" لأن الحركات في آخر الكلمة المعربة تسمى علامات إعراب.
-                    </div>
+                    <div class="explanation" id="q3b-explanation">الإجابة الصحيحة هي "علامات الإعراب".</div>
                 </div>
                 <div class="question" id="q3c-container">
                     <div class="question-text">ب- المبتدأ والخبر اسمان ................. دائماً: <span class="grade">نصف درجة</span></div>
@@ -491,9 +464,7 @@
                         <label><input type="radio" name="q3c" value="مجروران"> مجروران</label>
                         <label><input type="radio" name="q3c" value="مبنيان"> مبنيان</label>
                     </div>
-                    <div class="explanation" id="q3c-explanation">
-                        الإجابة الصحيحة هي "مرفوعان" لأن المبتدأ والخبر مرفوعان دائماً.
-                    </div>
+                    <div class="explanation" id="q3c-explanation">الإجابة الصحيحة هي "مرفوعان".</div>
                 </div>
                 <div class="question" id="q3d-container">
                     <div class="question-text">ت- أعرب كلمة (واسعةٌ) في الجملة (الحديقةُ واسعةٌ): <span class="grade">درجة</span></div>
@@ -503,9 +474,7 @@
                         <label><input type="radio" name="q3d" value="فاعل مرفوع وعلامة رفعه الضمة"> فاعل مرفوع وعلامة رفعه الضمة</label>
                         <label><input type="radio" name="q3d" value="مفعول به منصوب"> مفعول به منصوب</label>
                     </div>
-                    <div class="explanation" id="q3d-explanation">
-                        الإجابة الصحيحة هي "خبر مرفوع وعلامة رفعه الضمة" لأن "واسعة" خبر للمبتدأ "الحديقة".
-                    </div>
+                    <div class="explanation" id="q3d-explanation">الإجابة الصحيحة هي "خبر مرفوع وعلامة رفعه الضمة".</div>
                 </div>
                 <div class="question" id="q3e-container">
                     <div class="question-text">ث- اجعل كلمة (الكتابُ) مبتدأ في جملة اسمية مع الضبط الصحيح: <span class="grade">درجة</span></div>
@@ -515,9 +484,7 @@
                         <label><input type="radio" name="q3e" value="الكتابِ جميلٌ"> الكتابِ جميلٌ</label>
                         <label><input type="radio" name="q3e" value="الكتابْ نافعٌ"> الكتابْ نافعٌ</label>
                     </div>
-                    <div class="explanation" id="q3e-explanation">
-                        الإجابة الصحيحة هي "الكتابُ مفيدٌ" لأن المبتدأ يجب أن يكون مرفوعاً بالضمّة.
-                    </div>
+                    <div class="explanation" id="q3e-explanation">الإجابة الصحيحة هي "الكتابُ مفيدٌ".</div>
                 </div>
             </div>
             <button class="submit-btn" onclick="submitTest()">📝 إرسال الإجابات</button>
@@ -525,7 +492,7 @@
             <div class="result" id="result">
                 <div class="score-circle" id="score-circle"></div>
                 <div class="score" id="score"></div>
-                <p>تم تصحيح الإجابات تلقائياً. الإجابات الصحيحة مظللة باللون الأخضر.</p>
+                <p>تم تصحيح الإجابات تلقائياً.</p>
             </div>
             <!-- قسم عرض نموذج الإجابة -->
             <div class="answers-section" id="answers-section">
@@ -653,8 +620,8 @@
                     totalScore += questionScores[key];
                 }
             }
-            // تظليل الإجابات الصحيحة وعرض الشروحات
-            highlightCorrectAnswers();
+            // تظليل الإجابات الصحيحة والخاطئة
+            markAnswers(answers);
             // عرض النتيجة
             const resultDiv = document.getElementById('result');
             const scoreDiv = document.getElementById('score');
@@ -669,18 +636,23 @@
             // التمرير إلى النتيجة
             resultDiv.scrollIntoView({ behavior: 'smooth' });
         }
-        // دالة لتظليل الإجابات الصحيحة وعرض الشروحات
-        function highlightCorrectAnswers() {
+        // دالة لوضع علامات صح وخطأ على الإجابات
+        function markAnswers(userAnswers) {
             for (let key in correctAnswers) {
                 const container = document.getElementById(`${key}-container`);
                 const correctAnswer = correctAnswers[key];
+                const userAnswer = userAnswers[key];
                 const explanation = document.getElementById(`${key}-explanation`);
-                // تظليل الإجابة الصحيحة
+                // وضع علامات على الإجابات
                 const labels = container.querySelectorAll('label');
                 labels.forEach(label => {
                     const input = label.querySelector('input');
-                    if (input && input.value === correctAnswer) {
-                        label.classList.add('correct-answer');
+                    if (input) {
+                        if (input.value === correctAnswer) {
+                            label.classList.add('correct');
+                        } else if (input.value === userAnswer) {
+                            label.classList.add('incorrect');
+                        }
                     }
                 });
                 // عرض الشرح
@@ -695,9 +667,12 @@
             document.querySelectorAll('input[type="radio"]:checked').forEach(input => {
                 input.checked = false;
             });
-            // إزالة تظليل الإجابات الصحيحة
-            document.querySelectorAll('.correct-answer').forEach(label => {
-                label.classList.remove('correct-answer');
+            // إزالة علامات الإجابات
+            document.querySelectorAll('.correct').forEach(label => {
+                label.classList.remove('correct');
+            });
+            document.querySelectorAll('.incorrect').forEach(label => {
+                label.classList.remove('incorrect');
             });
             // إخفاء الشروحات
             document.querySelectorAll('.explanation').forEach(exp => {
