@@ -13,7 +13,6 @@
             padding: 20px;
             min-height: 100vh;
         }
-
         .container {
             max-width: 900px;
             margin: 0 auto;
@@ -22,24 +21,20 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
             overflow: hidden;
         }
-
         .header {
             background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
             color: white;
             padding: 30px;
             text-align: center;
         }
-
         .header h1 {
             margin: 0;
             font-size: 2.5rem;
             font-weight: bold;
         }
-
         .content {
             padding: 30px;
         }
-
         .section {
             margin-bottom: 40px;
             border: 2px solid #e3f2fd;
@@ -47,7 +42,6 @@
             padding: 25px;
             background: #fafafa;
         }
-
         .section-title {
             color: #1976d2;
             font-size: 1.5rem;
@@ -56,7 +50,6 @@
             border-bottom: 3px solid #4facfe;
             padding-bottom: 10px;
         }
-
         .reading-text {
             background: #f8f9fa;
             padding: 20px;
@@ -66,7 +59,6 @@
             line-height: 1.8;
             font-size: 1.1rem;
         }
-
         .question {
             margin-bottom: 20px;
             padding: 15px;
@@ -75,18 +67,15 @@
             border: 1px solid #e0e0e0;
             transition: all 0.3s ease;
         }
-
         .question.correct {
             background: #e8f5e9;
             border-color: #4caf50;
         }
-
         .question-text {
             font-weight: bold;
             color: #333;
             margin-bottom: 10px;
         }
-
         .grade {
             background: #4caf50;
             color: white;
@@ -95,7 +84,6 @@
             font-size: 0.8rem;
             margin-right: 10px;
         }
-
         input[type="text"], textarea {
             width: 100%;
             padding: 12px;
@@ -105,20 +93,17 @@
             transition: border-color 0.3s;
             font-family: inherit;
         }
-
         input[type="text"]:focus, textarea:focus {
             outline: none;
             border-color: #4facfe;
             box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.1);
         }
-
         .choices {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 10px;
             margin-top: 10px;
         }
-
         .choices label {
             display: flex;
             align-items: center;
@@ -131,45 +116,37 @@
             font-weight: 500;
             position: relative;
         }
-
         .choices label:hover {
             background: #e3f2fd;
             border-color: #4facfe;
         }
-
         .choices input[type="radio"] {
             margin-left: 10px;
             accent-color: #4facfe;
         }
-
         .choices label:has(input:checked) {
             background: #4facfe;
             color: white;
             border-color: #4facfe;
         }
-
         .choices label.correct-answer {
             background: #4caf50 !important;
             color: white !important;
             border-color: #388e3c !important;
         }
-
         .choices label.correct-answer::before {
             content: "✅ ";
             margin-right: 5px;
             font-weight: bold;
         }
-
         textarea {
             resize: vertical;
             min-height: 80px;
         }
-
         .poetry-section {
             background: #fff3e0;
             border: 2px solid #ff9800;
         }
-
         .poetry-text {
             background: #fafafa;
             padding: 20px;
@@ -180,12 +157,10 @@
             line-height: 2;
             font-size: 1.1rem;
         }
-
         .verse {
             margin-bottom: 10px;
             padding: 5px 0;
         }
-
         .submit-btn {
             background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
             color: white;
@@ -199,12 +174,10 @@
             display: block;
             margin: 30px auto;
         }
-
         .submit-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(79, 172, 254, 0.3);
         }
-
         .retry-btn {
             background: linear-gradient(135deg, #ff9800 0%, #f44336 100%);
             color: white;
@@ -218,12 +191,10 @@
             display: none;
             margin: 10px auto;
         }
-
         .retry-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(244, 67, 54, 0.3);
         }
-
         .result {
             background: #e8f5e8;
             border: 2px solid #4caf50;
@@ -233,7 +204,6 @@
             display: none;
             text-align: center;
         }
-
         .score {
             font-size: 2.5rem;
             font-weight: bold;
@@ -241,7 +211,6 @@
             text-align: center;
             margin-bottom: 15px;
         }
-
         .score-circle {
             width: 120px;
             height: 120px;
@@ -256,7 +225,6 @@
             margin: 0 auto 20px;
             box-shadow: 0 8px 16px rgba(46, 125, 50, 0.3);
         }
-
         .explanation {
             margin-top: 10px;
             padding: 10px;
@@ -266,14 +234,12 @@
             color: #555;
             display: none;
         }
-
         .footer {
             text-align: center;
             margin-top: 20px;
             font-weight: bold;
             color: #1976d2;
         }
-
         .whatsapp-link {
             display: block;
             text-align: center;
@@ -282,20 +248,29 @@
             text-decoration: none;
             font-weight: bold;
         }
-
+        .answers-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f0f7ff;
+            border-radius: 10px;
+            border: 2px solid #4facfe;
+            display: none;
+        }
+        .answers-section h3 {
+            color: #1976d2;
+            text-align: center;
+            margin-bottom: 15px;
+        }
         @media (max-width: 768px) {
             .choices {
                 grid-template-columns: 1fr;
             }
-
             .header h1 {
                 font-size: 1.8rem;
             }
-
             .content {
                 padding: 15px;
             }
-
             .score-circle {
                 width: 100px;
                 height: 100px;
@@ -310,19 +285,15 @@
             <h1>🌟 اختبار اللغة العربية 🌟</h1>
             <p>اقرأ النصوص بعناية وأجب عن الأسئلة</p>
         </div>
-
         <div class="content">
             <!-- القسم الأول: النصوص القرائية -->
             <div class="section">
                 <h2 class="section-title">📖 أولاً: النصوص القرائية</h2>
                 <p><strong>اقرأ الفقرة الآتية ثم أجب عن الأسئلة التي تليها:</strong></p>
-
                 <div class="reading-text">
                     <p><strong>1-</strong> في أعماق الغابات المطيرة، حيث تتشابك الأغصان وتتراقص أشعة الشمس بين أوراق الشجر الخضراء، يعيش طائر الياقوت بجماله الأخاذ. يعتبر هذا الطائر من أندر الكائنات الحية على وجه الأرض، ويتميز بريشه اللامع الذي يتلألأ بألوان قوس قزح. يعيش الياقوت حياة منعزلة في أعالي الأشجار، يتغذى على الفواكه الحلوة والرحيق الزاخر.</p>
-
                     <p><strong>2-</strong> ولكن، يواجه طائر الياقوت تهديدات كبيرة تهدد وجوده. فقد أدت قطع الأشجار والتوسع العمراني إلى تدمير بيئته الطبيعية، مما قلل من عدد الأشجار التي يتخذها مسكناً. بالإضافة إلى ذلك، يواجه الياقوت خطر الصيد غير المشروع، حيث يبحث الصيادون عن ريشه الجميل لبيعه في السوق السوداء.</p>
                 </div>
-
                 <div class="question" id="q1a1-container">
                     <div class="question-text">أ- استخرج من النص: <span class="grade">نصف درجة لكل إجابة</span></div>
                     <p>1- كلمة مضادها (أوفر وأكثر):</p>
@@ -335,7 +306,6 @@
                     <div class="explanation" id="q1a1-explanation">
                         الإجابة الصحيحة هي "أندر" لأن كلمة "أوفر وأكثر" تعني "أكثر وفرة"، ومضادها هو "أندر" أي "أقل وفرة".
                     </div>
-
                     <p>2- كلمة تكون جمع تكسير:</p>
                     <div class="choices" id="q1a2-choices">
                         <label><input type="radio" name="q1a2" value="الكائنات"> الكائنات</label>
@@ -347,7 +317,6 @@
                         الإجابة الصحيحة هي "الأغصان" لأنها جمع تكسير لكلمة "غصن".
                     </div>
                 </div>
-
                 <div class="question" id="q1b-container">
                     <div class="question-text">ب- بماذا يتميز طائر الياقوت كما ورد في الفقرة الأولى؟ <span class="grade">نصف درجة</span></div>
                     <div class="choices" id="q1b-choices">
@@ -360,7 +329,6 @@
                         الإجابة الصحيحة هي "ريشه اللامع الملون" كما ورد في الفقرة الأولى: "يتميز بريشه اللامع الذي يتلألأ بألوان قوس قزح".
                     </div>
                 </div>
-
                 <div class="question" id="q1c-container">
                     <div class="question-text">ت- ما التهديدات التي تواجه طائر الياقوت وتعرضه للانقراض – الفقرة الثانية؟ <span class="grade">درجة</span></div>
                     <div class="choices" id="q1c-choices">
@@ -373,7 +341,6 @@
                         الإجابة الصحيحة هي "قطع الأشجار والصيد غير المشروع" كما ورد في الفقرة الثانية.
                     </div>
                 </div>
-
                 <div class="question" id="q1d-container">
                     <div class="question-text">ث- ما الفكرة الجزئية التي تحدثت عنها الفقرة الثانية؟ <span class="grade">درجتان</span></div>
                     <div class="choices" id="q1d-choices">
@@ -386,7 +353,6 @@
                         الإجابة الصحيحة هي "التهديدات التي تواجه طائر الياقوت" لأن الفقرة الثانية تتحدث عن التهديدات مثل قطع الأشجار والصيد غير المشروع.
                     </div>
                 </div>
-
                 <div class="question" id="q1e-container">
                     <div class="question-text">ج- كيف يمكن الحفاظ على طائر الياقوت وحماية بيئته؟ <span class="grade">درجتان</span></div>
                     <div class="choices" id="q1e-choices">
@@ -400,22 +366,19 @@
                     </div>
                 </div>
             </div>
-
             <!-- القسم الثاني: النصوص الأدبية -->
             <div class="section poetry-section">
                 <h2 class="section-title">🎭 ثانياً: النصوص الأدبية</h2>
                 <p><strong>اقرأ الأبيات ثم أجب عن الأسئلة التي تليها:</strong></p>
-
                 <div class="poetry-text">
                     <div class="verse">5- فــأرادت الحــمـقـاء تعـرف &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; مـن رسائلـــه مــرامـــه</div>
                     <div class="verse">6- عَمَـدَت لأولــهـا وكـــان &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; إلـــى خــلـيفـتـه بـِرامـــه</div>
                     <div class="verse">7- فرأتــــه يأمـــر فــيـه &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; عـامـلـه بتـــاج للحــمـامـــه</div>
                     <div class="verse">8- ويقول : وفُّوها الرِّعايـة &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; في الرحيل وفي الإقامه</div>
                     <div class="verse">9- وأشرت في الثاني بأن &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; تُعطَى رياضاً في تهامـه</div>
-                    <div class="verse">10- وأتَت لثالثها ولـــم تسـتـــح &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; أن فَضَّـــت خِـتامـــه</div>
-                    <div class="verse">11- فرأتــه يأمر أن تكـون لهـا &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; علـى الطير الزعامـه</div>
+                    <div class="verse">10- وأتَت لثالثها ولـــم تسـتـــح &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; أن فَضَّـــت خِـتامـــه</div>
+                    <div class="verse">11- فرأتــه يأمر أن تكـون لهـا &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; علـى الطير الزعامـه</div>
                 </div>
-
                 <div class="question" id="q2a-container">
                     <div class="question-text">أ- ما مفرد كلمة (رسائل): <span class="grade">نصف درجة</span></div>
                     <div class="choices" id="q2a-choices">
@@ -428,7 +391,6 @@
                         الإجابة الصحيحة هي "رسالة" لأن مفرد "رسائل" هو "رسالة".
                     </div>
                 </div>
-
                 <div class="question" id="q2b-container">
                     <div class="question-text">ب- ما مرادف (الرعاية): <span class="grade">نصف درجة</span></div>
                     <div class="choices" id="q2b-choices">
@@ -441,7 +403,6 @@
                         الإجابة الصحيحة هي "الاهتمام" لأن "الرعاية" تعني العناية والاهتمام.
                     </div>
                 </div>
-
                 <div class="question" id="q2c-container">
                     <div class="question-text">ت- ورد في البيت الثامن موطن جمالي. اذكره؟ <span class="grade">درجة</span></div>
                     <div class="choices" id="q2c-choices">
@@ -454,7 +415,6 @@
                         الإجابة الصحيحة هي "تضاد بين الرحيل والإقامة" لأنهما متضادان في المعنى.
                     </div>
                 </div>
-
                 <div class="question" id="q2d-container">
                     <div class="question-text">ث- ما الجوائز التي خبأها سليمان عليه السلام في رسائله. اذكر اثنتين؟ <span class="grade">درجتان</span></div>
                     <div class="choices" id="q2d-choices">
@@ -467,7 +427,6 @@
                         الإجابة الصحيحة هي "تاج للحمامة ورياض في تهامة" كما ورد في الأبيات.
                     </div>
                 </div>
-
                 <div class="question" id="q2e-container">
                     <div class="question-text">ج- ما نصيحتك للشخص الذي يخون الأمانة ولا يحافظ عليها؟ <span class="grade">درجتان</span></div>
                     <div class="choices" id="q2e-choices">
@@ -481,16 +440,13 @@
                     </div>
                 </div>
             </div>
-
             <!-- القسم الثالث: النحو والصرف -->
             <div class="section">
                 <h2 class="section-title">📚 ثالثاً: النحو والصرف</h2>
                 <p><strong>اقرأ الفقرة الآتية ثم أجب عن الأسئلة التي تليها:</strong></p>
-
                 <div class="reading-text">
                     <p>الحديقةُ واسعةٌ، يلعب الأطفال فيها بفرحٍ وسعادةٍ، والأزهارُ متفتحةٌ، ويقومُ الأطفالُ بجمعِ الأزهار الملونة، والأم مستريحةٌ على مقعدٍ خشبيٍ، وتقرأ كتابًا شيقًا. الطيورُ محلقةٌ في السماء، وتغرد بألحانٍ جميلةٍ. والشمسُ تشرق في سعادة؛ لتضيء الكون بنورها الدافئ.</p>
                 </div>
-
                 <div class="question" id="q3a1-container">
                     <div class="question-text">استخرج من الفقرة: <span class="grade">نصف درجة لكل إجابة</span></div>
                     <p>1- فعل معرب:</p>
@@ -503,7 +459,6 @@
                     <div class="explanation" id="q3a1-explanation">
                         الإجابة الصحيحة هي "يلعب" لأنه فعل مضارع معرب.
                     </div>
-
                     <p>2- مبتدأ مرفوع:</p>
                     <div class="choices" id="q3a2-choices">
                         <label><input type="radio" name="q3a2" value="الحديقةُ"> الحديقةُ</label>
@@ -515,7 +470,6 @@
                         الإجابة الصحيحة هي "الحديقةُ" لأنها مبتدأ مرفوع وعلامة رفعه الضمة.
                     </div>
                 </div>
-
                 <div class="question" id="q3b-container">
                     <div class="question-text">أ- الحركات التي تكون في آخر الكلمة المعربة تسمى: <span class="grade">نصف درجة</span></div>
                     <div class="choices" id="q3b-choices">
@@ -528,7 +482,6 @@
                         الإجابة الصحيحة هي "علامات الإعراب" لأن الحركات في آخر الكلمة المعربة تسمى علامات إعراب.
                     </div>
                 </div>
-
                 <div class="question" id="q3c-container">
                     <div class="question-text">ب- المبتدأ والخبر اسمان ................. دائماً: <span class="grade">نصف درجة</span></div>
                     <div class="choices" id="q3c-choices">
@@ -541,7 +494,6 @@
                         الإجابة الصحيحة هي "مرفوعان" لأن المبتدأ والخبر مرفوعان دائماً.
                     </div>
                 </div>
-
                 <div class="question" id="q3d-container">
                     <div class="question-text">ت- أعرب كلمة (واسعةٌ) في الجملة (الحديقةُ واسعةٌ): <span class="grade">درجة</span></div>
                     <div class="choices" id="q3d-choices">
@@ -554,7 +506,6 @@
                         الإجابة الصحيحة هي "خبر مرفوع وعلامة رفعه الضمة" لأن "واسعة" خبر للمبتدأ "الحديقة".
                     </div>
                 </div>
-
                 <div class="question" id="q3e-container">
                     <div class="question-text">ث- اجعل كلمة (الكتابُ) مبتدأ في جملة اسمية مع الضبط الصحيح: <span class="grade">درجة</span></div>
                     <div class="choices" id="q3e-choices">
@@ -568,26 +519,51 @@
                     </div>
                 </div>
             </div>
-
             <button class="submit-btn" onclick="submitTest()">📝 إرسال الإجابات</button>
             <button class="retry-btn" id="retry-btn" onclick="retryTest()">🔄 إعادة الاختبار</button>
-
             <div class="result" id="result">
                 <div class="score-circle" id="score-circle"></div>
                 <div class="score" id="score"></div>
                 <p>تم تصحيح الإجابات تلقائياً. الإجابات الصحيحة مظللة باللون الأخضر.</p>
             </div>
-
+            <!-- قسم عرض نموذج الإجابة -->
+            <div class="answers-section" id="answers-section">
+                <h3>📋 نموذج الإجابة الصحيح</h3>
+                <div class="section">
+                    <h4>📖 أولاً: النصوص القرائية</h4>
+                    <p><strong>1-</strong> أندر</p>
+                    <p><strong>2-</strong> الأغصان</p>
+                    <p><strong>3-</strong> ريشه اللامع الملون</p>
+                    <p><strong>4-</strong> قطع الأشجار والصيد غير المشروع</p>
+                    <p><strong>5-</strong> التهديدات التي تواجه طائر الياقوت</p>
+                    <p><strong>6-</strong> حماية الغابات ومنع الصيد</p>
+                </div>
+                <div class="section">
+                    <h4>🎭 ثانياً: النصوص الأدبية</h4>
+                    <p><strong>1-</strong> رسالة</p>
+                    <p><strong>2-</strong> الاهتمام</p>
+                    <p><strong>3-</strong> تضاد بين الرحيل والإقامة</p>
+                    <p><strong>4-</strong> تاج للحمامة ورياض في تهامة</p>
+                    <p><strong>5-</strong> أن يتقي الله ويحافظ على الأمانة</p>
+                </div>
+                <div class="section">
+                    <h4>📚 ثالثاً: النحو والصرف</h4>
+                    <p><strong>1-</strong> يلعب</p>
+                    <p><strong>2-</strong> الحديقةُ</p>
+                    <p><strong>3-</strong> علامات الإعراب</p>
+                    <p><strong>4-</strong> مرفوعان</p>
+                    <p><strong>5-</strong> خبر مرفوع وعلامة رفعه الضمة</p>
+                    <p><strong>6-</strong> الكتابُ مفيدٌ</p>
+                </div>
+            </div>
             <a href="https://whatsapp.com/channel/0029VamotBKCxoAy3fzUcv3T" class="whatsapp-link" target="_blank">
                 انضم إلى قناة الواتساب الخاصة بنا 📲
             </a>
         </div>
-
         <div class="footer">
             إعداد: الأستاذ خليل البلوشي
         </div>
     </div>
-
     <script>
         // الإجابات الصحيحة
         const correctAnswers = {
@@ -609,14 +585,12 @@
             q3d: "خبر مرفوع وعلامة رفعه الضمة",
             q3e: "الكتابُ مفيدٌ"
         };
-
         // درجات الأسئلة
         const questionScores = {
             q1a1: 0.5, q1a2: 0.5, q1b: 0.5, q1c: 1, q1d: 2, q1e: 2,
             q2a: 0.5, q2b: 0.5, q2c: 1, q2d: 2, q2e: 2,
             q3a1: 0.5, q3a2: 0.5, q3b: 0.5, q3c: 0.5, q3d: 1, q3e: 1
         };
-
         // تبعثر الاختيارات عند تحميل الصفحة
         window.onload = function() {
             shuffleChoices("q1a1-choices");
@@ -637,7 +611,6 @@
             shuffleChoices("q3d-choices");
             shuffleChoices("q3e-choices");
         };
-
         // دالة لتبديل ترتيب الاختيارات
         function shuffleChoices(containerId) {
             const container = document.getElementById(containerId);
@@ -649,7 +622,6 @@
             }
             choicesArray.forEach(choice => container.appendChild(choice));
         }
-
         function submitTest() {
             // جمع الإجابات
             const answers = {
@@ -671,7 +643,6 @@
                 q3d: document.querySelector('input[name="q3d"]:checked')?.value || '',
                 q3e: document.querySelector('input[name="q3e"]:checked')?.value || ''
             };
-
             // حساب الدرجة
             let totalScore = 0;
             let totalPossibleScore = 0;
@@ -681,10 +652,8 @@
                     totalScore += questionScores[key];
                 }
             }
-
             // تظليل الإجابات الصحيحة وعرض الشروحات
             highlightCorrectAnswers();
-
             // عرض النتيجة
             const resultDiv = document.getElementById('result');
             const scoreDiv = document.getElementById('score');
@@ -694,24 +663,22 @@
             resultDiv.style.display = 'block';
             document.querySelector('.submit-btn').style.display = 'none';
             document.getElementById('retry-btn').style.display = 'block';
-
+            // عرض نموذج الإجابة
+            document.getElementById('answers-section').style.display = 'block';
             // التمرير إلى النتيجة
             resultDiv.scrollIntoView({ behavior: 'smooth' });
         }
-
         // دالة لتظليل الإجابات الصحيحة وعرض الشروحات
         function highlightCorrectAnswers() {
             for (let key in correctAnswers) {
                 const container = document.getElementById(`${key}-container`);
                 const correctAnswer = correctAnswers[key];
                 const explanation = document.getElementById(`${key}-explanation`);
-
                 // تظليل الحاوية إذا كانت الإجابة صحيحة
                 const selectedAnswer = document.querySelector(`input[name="${key}"]:checked`)?.value;
                 if (selectedAnswer === correctAnswer) {
                     container.classList.add('correct');
                 }
-
                 // تظليل الإجابة الصحيحة
                 const labels = container.querySelectorAll('label');
                 labels.forEach(label => {
@@ -720,35 +687,29 @@
                         label.classList.add('correct-answer');
                     }
                 });
-
                 // عرض الشرح
                 if (explanation) {
                     explanation.style.display = 'block';
                 }
             }
         }
-
         // دالة لإعادة الاختبار
         function retryTest() {
             // إعادة تعيين جميع الإجابات
             document.querySelectorAll('input[type="radio"]:checked').forEach(input => {
                 input.checked = false;
             });
-
             // إزالة تظليل الإجابات الصحيحة
             document.querySelectorAll('.question.correct').forEach(q => {
                 q.classList.remove('correct');
             });
-
             document.querySelectorAll('.correct-answer').forEach(label => {
                 label.classList.remove('correct-answer');
             });
-
             // إخفاء الشروحات
             document.querySelectorAll('.explanation').forEach(exp => {
                 exp.style.display = 'none';
             });
-
             // إعادة تبعثر الاختيارات
             shuffleChoices("q1a1-choices");
             shuffleChoices("q1a2-choices");
@@ -767,19 +728,17 @@
             shuffleChoices("q3c-choices");
             shuffleChoices("q3d-choices");
             shuffleChoices("q3e-choices");
-
             // إخفاء النتيجة وإظهار زر الإرسال
             document.getElementById('result').style.display = 'none';
+            document.getElementById('answers-section').style.display = 'none';
             document.getElementById('retry-btn').style.display = 'none';
             document.querySelector('.submit-btn').style.display = 'block';
         }
-
         // إضافة تأثيرات تفاعلية للحقول
         document.querySelectorAll('input, textarea').forEach(element => {
             element.addEventListener('focus', function() {
                 this.style.transform = 'scale(1.02)';
             });
-
             element.addEventListener('blur', function() {
                 this.style.transform = 'scale(1)';
             });
