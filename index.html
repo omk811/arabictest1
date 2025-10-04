@@ -77,6 +77,7 @@
             margin-bottom: 10px;
         }
         .grade {
+            display: none; /* إخفاء مربع الدرجة لكل سؤال */
             background: #4caf50;
             color: white;
             padding: 3px 8px;
@@ -674,11 +675,6 @@
                 const container = document.getElementById(`${key}-container`);
                 const correctAnswer = correctAnswers[key];
                 const explanation = document.getElementById(`${key}-explanation`);
-                // تظليل الحاوية إذا كانت الإجابة صحيحة
-                const selectedAnswer = document.querySelector(`input[name="${key}"]:checked`)?.value;
-                if (selectedAnswer === correctAnswer) {
-                    container.classList.add('correct');
-                }
                 // تظليل الإجابة الصحيحة
                 const labels = container.querySelectorAll('label');
                 labels.forEach(label => {
@@ -700,9 +696,6 @@
                 input.checked = false;
             });
             // إزالة تظليل الإجابات الصحيحة
-            document.querySelectorAll('.question.correct').forEach(q => {
-                q.classList.remove('correct');
-            });
             document.querySelectorAll('.correct-answer').forEach(label => {
                 label.classList.remove('correct-answer');
             });
