@@ -209,6 +209,15 @@
             font-weight: bold;
             color: #1976d2;
         }
+
+        .whatsapp-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #25D366;
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -231,16 +240,16 @@
                 </div>
 
                 <div class="question">
-                    <div class="question-text">أ- استخرج من النص: <span class="grade">درجة</span></div>
+                    <div class="question-text">أ- استخرج من النص: <span class="grade">نصف درجة لكل إجابة</span></div>
                     <p>1- كلمة مضادها (أوفر وأكثر):</p>
-                    <div class="choices">
+                    <div class="choices" id="q1a1-choices">
                         <label><input type="radio" name="q1a1" value="أندر"> أندر</label>
                         <label><input type="radio" name="q1a1" value="أعماق"> أعماق</label>
                         <label><input type="radio" name="q1a1" value="أعالي"> أعالي</label>
                         <label><input type="radio" name="q1a1" value="أخاذ"> أخاذ</label>
                     </div>
                     <p>2- كلمة تكون جمع تكسير:</p>
-                    <div class="choices">
+                    <div class="choices" id="q1a2-choices">
                         <label><input type="radio" name="q1a2" value="الكائنات"> الكائنات</label>
                         <label><input type="radio" name="q1a2" value="الصيادون"> الصيادون</label>
                         <label><input type="radio" name="q1a2" value="الأغصان"> الأغصان</label>
@@ -249,8 +258,8 @@
                 </div>
 
                 <div class="question">
-                    <div class="question-text">ب- بماذا يتميز طائر الياقوت كما ورد في الفقرة الأولى؟ <span class="grade">درجة</span></div>
-                    <div class="choices">
+                    <div class="question-text">ب- بماذا يتميز طائر الياقوت كما ورد في الفقرة الأولى؟ <span class="grade">نصف درجة</span></div>
+                    <div class="choices" id="q1b-choices">
                         <label><input type="radio" name="q1b" value="ريشه اللامع الملون"> ريشه اللامع الملون</label>
                         <label><input type="radio" name="q1b" value="صوته العذب"> صوته العذب</label>
                         <label><input type="radio" name="q1b" value="سرعته في الطيران"> سرعته في الطيران</label>
@@ -260,7 +269,7 @@
 
                 <div class="question">
                     <div class="question-text">ت- ما التهديدات التي تواجه طائر الياقوت وتعرضه للانقراض – الفقرة الثانية؟ <span class="grade">درجة</span></div>
-                    <div class="choices">
+                    <div class="choices" id="q1c-choices">
                         <label><input type="radio" name="q1c" value="قطع الأشجار والصيد غير المشروع"> قطع الأشجار والصيد غير المشروع</label>
                         <label><input type="radio" name="q1c" value="التلوث البيئي فقط"> التلوث البيئي فقط</label>
                         <label><input type="radio" name="q1c" value="نقص الغذاء فقط"> نقص الغذاء فقط</label>
@@ -270,7 +279,7 @@
 
                 <div class="question">
                     <div class="question-text">ث- ما الفكرة الجزئية التي تحدثت عنها الفقرة الثانية؟ <span class="grade">درجتان</span></div>
-                    <div class="choices">
+                    <div class="choices" id="q1d-choices">
                         <label><input type="radio" name="q1d" value="التهديدات التي تواجه طائر الياقوت"> التهديدات التي تواجه طائر الياقوت</label>
                         <label><input type="radio" name="q1d" value="جمال طائر الياقوت"> جمال طائر الياقوت</label>
                         <label><input type="radio" name="q1d" value="غذاء طائر الياقوت"> غذاء طائر الياقوت</label>
@@ -280,7 +289,7 @@
 
                 <div class="question">
                     <div class="question-text">ج- كيف يمكن الحفاظ على طائر الياقوت وحماية بيئته؟ <span class="grade">درجتان</span></div>
-                    <div class="choices">
+                    <div class="choices" id="q1e-choices">
                         <label><input type="radio" name="q1e" value="حماية الغابات ومنع الصيد"> حماية الغابات ومنع الصيد</label>
                         <label><input type="radio" name="q1e" value="نقله إلى حدائق الحيوان"> نقله إلى حدائق الحيوان</label>
                         <label><input type="radio" name="q1e" value="تربيته في المنازل"> تربيته في المنازل</label>
@@ -300,13 +309,13 @@
                     <div class="verse">7- فرأتــــه يأمـــر فــيـه &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; عـامـلـه بتـــاج للحــمـامـــه</div>
                     <div class="verse">8- ويقول : وفُّوها الرِّعايـة &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; في الرحيل وفي الإقامه</div>
                     <div class="verse">9- وأشرت في الثاني بأن &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; تُعطَى رياضاً في تهامـه</div>
-                    <div class="verse">10- وأتت لثالثها ولـــم تسـتـــح &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; أن فَضَّـــت خِـتامـــه</div>
+                    <div class="verse">10- وأتَت لثالثها ولـــم تسـتـــح &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; أن فَضَّـــت خِـتامـــه</div>
                     <div class="verse">11- فرأتــه يأمر أن تكـون لهـا &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; علـى الطير الزعامـه</div>
                 </div>
 
                 <div class="question">
-                    <div class="question-text">أ- ما مفرد كلمة (رسائل): <span class="grade">½</span></div>
-                    <div class="choices">
+                    <div class="question-text">أ- ما مفرد كلمة (رسائل): <span class="grade">نصف درجة</span></div>
+                    <div class="choices" id="q2a-choices">
                         <label><input type="radio" name="q2a" value="رسالة"> رسالة</label>
                         <label><input type="radio" name="q2a" value="مرسال"> مرسال</label>
                         <label><input type="radio" name="q2a" value="رسول"> رسول</label>
@@ -315,8 +324,8 @@
                 </div>
 
                 <div class="question">
-                    <div class="question-text">ب- ما مرادف (الرعاية): <span class="grade">½</span></div>
-                    <div class="choices">
+                    <div class="question-text">ب- ما مرادف (الرعاية): <span class="grade">نصف درجة</span></div>
+                    <div class="choices" id="q2b-choices">
                         <label><input type="radio" name="q2b" value="الاهتمام"> الاهتمام</label>
                         <label><input type="radio" name="q2b" value="الإهمال"> الإهمال</label>
                         <label><input type="radio" name="q2b" value="الرفض"> الرفض</label>
@@ -326,7 +335,7 @@
 
                 <div class="question">
                     <div class="question-text">ت- ورد في البيت الثامن موطن جمالي. اذكره؟ <span class="grade">درجة</span></div>
-                    <div class="choices">
+                    <div class="choices" id="q2c-choices">
                         <label><input type="radio" name="q2c" value="تضاد بين الرحيل والإقامة"> تضاد بين الرحيل والإقامة</label>
                         <label><input type="radio" name="q2c" value="الاستعارة في كلمة الرعاية"> الاستعارة في كلمة الرعاية</label>
                         <label><input type="radio" name="q2c" value="الجناس بين الكلمات"> الجناس بين الكلمات</label>
@@ -336,7 +345,7 @@
 
                 <div class="question">
                     <div class="question-text">ث- ما الجوائز التي خبأها سليمان عليه السلام في رسائله. اذكر اثنتين؟ <span class="grade">درجتان</span></div>
-                    <div class="choices">
+                    <div class="choices" id="q2d-choices">
                         <label><input type="radio" name="q2d" value="تاج للحمامة ورياض في تهامة"> تاج للحمامة ورياض في تهامة</label>
                         <label><input type="radio" name="q2d" value="ذهب وفضة"> ذهب وفضة</label>
                         <label><input type="radio" name="q2d" value="طعام وشراب"> طعام وشراب</label>
@@ -346,7 +355,7 @@
 
                 <div class="question">
                     <div class="question-text">ج- ما نصيحتك للشخص الذي يخون الأمانة ولا يحافظ عليها؟ <span class="grade">درجتان</span></div>
-                    <div class="choices">
+                    <div class="choices" id="q2e-choices">
                         <label><input type="radio" name="q2e" value="أن يتقي الله ويحافظ على الأمانة"> أن يتقي الله ويحافظ على الأمانة</label>
                         <label><input type="radio" name="q2e" value="أن يتجاهل الأمر"> أن يتجاهل الأمر</label>
                         <label><input type="radio" name="q2e" value="أن يخفي الأمانة"> أن يخفي الأمانة</label>
@@ -365,16 +374,16 @@
                 </div>
 
                 <div class="question">
-                    <div class="question-text">استخرج من الفقرة: <span class="grade">درجة</span></div>
+                    <div class="question-text">استخرج من الفقرة: <span class="grade">نصف درجة لكل إجابة</span></div>
                     <p>1- فعل معرب:</p>
-                    <div class="choices">
+                    <div class="choices" id="q3a1-choices">
                         <label><input type="radio" name="q3a1" value="يلعب"> يلعب</label>
                         <label><input type="radio" name="q3a1" value="الحديقة"> الحديقة</label>
                         <label><input type="radio" name="q3a1" value="واسعة"> واسعة</label>
                         <label><input type="radio" name="q3a1" value="فيها"> فيها</label>
                     </div>
                     <p>2- مبتدأ مرفوع:</p>
-                    <div class="choices">
+                    <div class="choices" id="q3a2-choices">
                         <label><input type="radio" name="q3a2" value="الحديقةُ"> الحديقةُ</label>
                         <label><input type="radio" name="q3a2" value="بفرح"> بفرح</label>
                         <label><input type="radio" name="q3a2" value="يلعب"> يلعب</label>
@@ -383,8 +392,8 @@
                 </div>
 
                 <div class="question">
-                    <div class="question-text">أ- الحركات التي تكون في آخر الكلمة المعربة تسمى: <span class="grade">½ درجة</span></div>
-                    <div class="choices">
+                    <div class="question-text">أ- الحركات التي تكون في آخر الكلمة المعربة تسمى: <span class="grade">نصف درجة</span></div>
+                    <div class="choices" id="q3b-choices">
                         <label><input type="radio" name="q3b" value="علامات الإعراب"> علامات الإعراب</label>
                         <label><input type="radio" name="q3b" value="الاسم والفعل والحرف"> الاسم والفعل والحرف</label>
                         <label><input type="radio" name="q3b" value="علامات البناء"> علامات البناء</label>
@@ -393,8 +402,8 @@
                 </div>
 
                 <div class="question">
-                    <div class="question-text">ب- المبتدأ والخبر اسمان ................. دائماً: <span class="grade">½ درجة</span></div>
-                    <div class="choices">
+                    <div class="question-text">ب- المبتدأ والخبر اسمان ................. دائماً: <span class="grade">نصف درجة</span></div>
+                    <div class="choices" id="q3c-choices">
                         <label><input type="radio" name="q3c" value="مرفوعان"> مرفوعان</label>
                         <label><input type="radio" name="q3c" value="منصوبان"> منصوبان</label>
                         <label><input type="radio" name="q3c" value="مجروران"> مجروران</label>
@@ -404,7 +413,7 @@
 
                 <div class="question">
                     <div class="question-text">ت- أعرب كلمة (واسعةٌ) في الجملة (الحديقةُ واسعةٌ): <span class="grade">درجة</span></div>
-                    <div class="choices">
+                    <div class="choices" id="q3d-choices">
                         <label><input type="radio" name="q3d" value="خبر مرفوع وعلامة رفعه الضمة"> خبر مرفوع وعلامة رفعه الضمة</label>
                         <label><input type="radio" name="q3d" value="مبتدأ مرفوع وعلامة رفعه الضمة"> مبتدأ مرفوع وعلامة رفعه الضمة</label>
                         <label><input type="radio" name="q3d" value="فاعل مرفوع وعلامة رفعه الضمة"> فاعل مرفوع وعلامة رفعه الضمة</label>
@@ -414,7 +423,7 @@
 
                 <div class="question">
                     <div class="question-text">ث- اجعل كلمة (الكتابُ) مبتدأ في جملة اسمية مع الضبط الصحيح: <span class="grade">درجة</span></div>
-                    <div class="choices">
+                    <div class="choices" id="q3e-choices">
                         <label><input type="radio" name="q3e" value="الكتابُ مفيدٌ"> الكتابُ مفيدٌ</label>
                         <label><input type="radio" name="q3e" value="الكتابَ مفيدٌ"> الكتابَ مفيدٌ</label>
                         <label><input type="radio" name="q3e" value="الكتابِ جميلٌ"> الكتابِ جميلٌ</label>
@@ -429,6 +438,10 @@
                 <div class="score" id="score"></div>
                 <div id="feedback"></div>
             </div>
+
+            <a href="https://whatsapp.com/channel/0029VamotBKCxoAy3fzUcv3T" class="whatsapp-link" target="_blank">
+                انضم إلى قناة الواتساب الخاصة بنا 📲
+            </a>
         </div>
 
         <div class="footer">
@@ -460,10 +473,43 @@
 
         // درجات الأسئلة
         const questionScores = {
-            q1a1: 1, q1a2: 1, q1b: 1, q1c: 1, q1d: 2, q1e: 2,
+            q1a1: 0.5, q1a2: 0.5, q1b: 0.5, q1c: 1, q1d: 2, q1e: 2,
             q2a: 0.5, q2b: 0.5, q2c: 1, q2d: 2, q2e: 2,
-            q3a1: 1, q3a2: 1, q3b: 0.5, q3c: 0.5, q3d: 1, q3e: 1
+            q3a1: 0.5, q3a2: 0.5, q3b: 0.5, q3c: 0.5, q3d: 1, q3e: 1
         };
+
+        // تبعثر الاختيارات عند تحميل الصفحة
+        window.onload = function() {
+            shuffleChoices("q1a1-choices");
+            shuffleChoices("q1a2-choices");
+            shuffleChoices("q1b-choices");
+            shuffleChoices("q1c-choices");
+            shuffleChoices("q1d-choices");
+            shuffleChoices("q1e-choices");
+            shuffleChoices("q2a-choices");
+            shuffleChoices("q2b-choices");
+            shuffleChoices("q2c-choices");
+            shuffleChoices("q2d-choices");
+            shuffleChoices("q2e-choices");
+            shuffleChoices("q3a1-choices");
+            shuffleChoices("q3a2-choices");
+            shuffleChoices("q3b-choices");
+            shuffleChoices("q3c-choices");
+            shuffleChoices("q3d-choices");
+            shuffleChoices("q3e-choices");
+        };
+
+        // دالة لتبديل ترتيب الاختيارات
+        function shuffleChoices(containerId) {
+            const container = document.getElementById(containerId);
+            const choices = container.querySelectorAll('label');
+            const choicesArray = Array.from(choices);
+
+            for (let i = choicesArray.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                container.insertBefore(choicesArray[j], choicesArray[i]);
+            }
+        }
 
         function submitTest() {
             // جمع الإجابات
