@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>اختبار اللغة العربية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             box-sizing: border-box;
@@ -149,13 +150,16 @@
             border-radius: 10px;
             border-right: 5px solid #ff9800;
             margin-bottom: 25px;
-            font-family: 'Times New Roman', serif;
+            font-family: 'Noto Kufi Arabic', serif;
             line-height: 2;
             font-size: 1.1rem;
+            text-align: right;
+            direction: rtl;
         }
         .verse {
             margin-bottom: 10px;
             padding: 5px 0;
+            text-align: right;
         }
         .submit-btn {
             background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
@@ -350,18 +354,19 @@
                     <div class="explanation" id="q1e-explanation">الإجابة الصحيحة: حماية الغابات ومنع الصيد</div>
                 </div>
             </div>
+
             <!-- القسم الثاني: النصوص الأدبية -->
             <div class="section poetry-section">
                 <h2 class="section-title">🎭 ثانياً: النصوص الأدبية</h2>
                 <p><strong>اقرأ الأبيات ثم أجب عن الأسئلة التي تليها:</strong></p>
                 <div class="poetry-text">
-                    <div class="verse">5- فــأرادت الحــمـقـاء تعـرف &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; مـن رسائلـــه مــرامـــه</div>
-                    <div class="verse">6- عَمَـدَت لأولــهـا وكـــان &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; إلـــى خــلـيفـتـه بـِرامـــه</div>
-                    <div class="verse">7- فرأتــــه يأمـــر فــيـه &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; عـامـلـه بتـــاج للحــمـامـــه</div>
-                    <div class="verse">8- ويقول : وفُّوها الرِّعايـة &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; في الرحيل وفي الإقامه</div>
-                    <div class="verse">9- وأشرت في الثاني بأن &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; تُعطَى رياضاً في تهامـه</div>
-                    <div class="verse">10- وأتَت لثالثها ولـــم تسـتـــح &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; أن فَضَّـــت خِـتامـــه</div>
-                    <div class="verse">11- فرأتــه يأمر أن تكـون لهـا &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; علـى الطير الزعامـه</div>
+                    <div class="verse">فــأرادت الحــمـقـاء تعـرف<span style="display:inline-block;width:40px;"></span>من رسائلـــه مــرامـــه</div>
+                    <div class="verse">عَمَـدَت لأولــهـا وكـــان<span style="display:inline-block;width:40px;"></span>إلـــى خــلـيفـتـه بـِرامـــه</div>
+                    <div class="verse">فرأتــــه يأمـــر فــيـه<span style="display:inline-block;width:40px;"></span>عـامـلـه بتـــاج للحــمـامـــه</div>
+                    <div class="verse">ويقول : وفُّوها الرِّعايـة<span style="display:inline-block;width:40px;"></span>في الرحيل وفي الإقامه</div>
+                    <div class="verse">وأشرت في الثاني بأن<span style="display:inline-block;width:40px;"></span>تُعطَى رياضاً في تهامـه</div>
+                    <div class="verse">وأتَت لثالثها ولـــم تسـتـــح<span style="display:inline-block;width:40px;"></span>أن فَضَّـــت خِـتامـــه</div>
+                    <div class="verse">فرأتــه يأمر أن تكـون لهـا<span style="display:inline-block;width:40px;"></span>علـى الطير الزعامـه</div>
                 </div>
                 <div class="question" id="q2a-container">
                     <div class="question-text">أ- ما مفرد كلمة (رسائل): <span class="grade">نصف درجة</span></div>
@@ -414,6 +419,7 @@
                     <div class="explanation" id="q2e-explanation">الإجابة الصحيحة: أن يتقي الله ويحافظ على الأمانة</div>
                 </div>
             </div>
+
             <!-- القسم الثالث: النحو والصرف -->
             <div class="section">
                 <h2 class="section-title">📚 ثالثاً: النحو والصرف</h2>
@@ -481,13 +487,16 @@
                     <div class="explanation" id="q3e-explanation">الإجابة الصحيحة: الكتابُ مفيدٌ</div>
                 </div>
             </div>
+
             <button class="submit-btn" onclick="submitTest()">إرسال الإجابات</button>
             <button class="retry-btn" id="retry-btn" onclick="retryTest()">إعادة الاختبار</button>
+
             <div class="result" id="result">
                 <div class="score-circle" id="score-circle"></div>
                 <div class="score" id="score"></div>
             </div>
-            <!-- قسم عرض نموذج الإجابة -->
+
+            <!-- نموذج الإجابة -->
             <div class="answers-section" id="answers-section">
                 <h3>نموذج الإجابة الصحيح</h3>
                 <div class="section">
@@ -517,6 +526,7 @@
                     <p><strong>6-</strong> الكتابُ مفيدٌ</p>
                 </div>
             </div>
+
             <a href="https://whatsapp.com/channel/0029VamotBKCxoAy3fzUcv3T" class="whatsapp-link" target="_blank">
                 انضم إلى قناة الواتساب الخاصة بنا 📲
             </a>
@@ -525,8 +535,8 @@
             إعداد: الأستاذ خليل البلوشي
         </div>
     </div>
+
     <script>
-        // الإجابات الصحيحة
         const correctAnswers = {
             q1a1: "أندر",
             q1a2: "الأغصان",
@@ -547,87 +557,73 @@
             q3e: "الكتابُ مفيدٌ"
         };
 
-        // درجات الأسئلة
         const questionScores = {
             q1a1: 0.5, q1a2: 0.5, q1b: 0.5, q1c: 1, q1d: 2, q1e: 2,
             q2a: 0.5, q2b: 0.5, q2c: 1, q2d: 2, q2e: 2,
             q3a1: 0.5, q3a2: 0.5, q3b: 0.5, q3c: 0.5, q3d: 1, q3e: 1
         };
 
-        // تبعثر الاختيارات عند تحميل الصفحة
         window.onload = function() {
-            shuffleChoices("q1a1-choices");
-            shuffleChoices("q1a2-choices");
-            shuffleChoices("q1b-choices");
-            shuffleChoices("q1c-choices");
-            shuffleChoices("q1d-choices");
-            shuffleChoices("q1e-choices");
-            shuffleChoices("q2a-choices");
-            shuffleChoices("q2b-choices");
-            shuffleChoices("q2c-choices");
-            shuffleChoices("q2d-choices");
-            shuffleChoices("q2e-choices");
-            shuffleChoices("q3a1-choices");
-            shuffleChoices("q3a2-choices");
-            shuffleChoices("q3b-choices");
-            shuffleChoices("q3c-choices");
-            shuffleChoices("q3d-choices");
-            shuffleChoices("q3e-choices");
+            // تبديل ترتيب الخيارات عشوائيًا
+            const containers = [
+                "q1a1-choices", "q1a2-choices", "q1b-choices", "q1c-choices", "q1d-choices", "q1e-choices",
+                "q2a-choices", "q2b-choices", "q2c-choices", "q2d-choices", "q2e-choices",
+                "q3a1-choices", "q3a2-choices", "q3b-choices", "q3c-choices", "q3d-choices", "q3e-choices"
+            ];
+            containers.forEach(id => shuffleChoices(id));
         };
 
-        // دالة لتبديل ترتيب الاختيارات
         function shuffleChoices(containerId) {
             const container = document.getElementById(containerId);
-            const choices = container.querySelectorAll('label');
-            const choicesArray = Array.from(choices);
-            for (let i = choicesArray.length - 1; i > 0; i--) {
+            if (!container) return;
+            const choices = Array.from(container.querySelectorAll('label'));
+            for (let i = choices.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
-                [choicesArray[i], choicesArray[j]] = [choicesArray[j], choicesArray[i]];
+                [choices[i], choices[j]] = [choices[j], choices[i]];
             }
-            choicesArray.forEach(choice => container.appendChild(choice));
+            choices.forEach(choice => container.appendChild(choice));
         }
 
         function submitTest() {
-            // جمع الإجابات
             const answers = {};
             for (let key in correctAnswers) {
-                answers[key] = document.querySelector(`input[name="${key}"]:checked`)?.value || '';
+                const selected = document.querySelector(`input[name="${key}"]:checked`);
+                answers[key] = selected ? selected.value : '';
             }
 
             // حساب الدرجة
             let totalScore = 0;
-            let totalPossibleScore = 0;
-            for (let key in answers) {
-                totalPossibleScore += questionScores[key];
+            let totalPossible = 0;
+            for (let key in questionScores) {
+                totalPossible += questionScores[key];
                 if (answers[key] === correctAnswers[key]) {
                     totalScore += questionScores[key];
                 }
             }
 
-            // وضع علامات على الإجابات
+            // وضع علامات التصحيح
             for (let key in correctAnswers) {
                 const container = document.getElementById(`${key}-container`);
+                if (!container) continue;
                 const labels = container.querySelectorAll('label');
                 labels.forEach(label => {
-                    const input = label.querySelector('input');
-                    if (input) {
-                        if (input.value === correctAnswers[key]) {
-                            label.classList.add('correct');
-                        } else if (input.checked) {
-                            label.classList.add('incorrect');
-                        }
+                    label.classList.remove('correct', 'incorrect');
+                    const input = label.querySelector('input[type="radio"]');
+                    if (!input) return;
+                    if (input.value === correctAnswers[key]) {
+                        label.classList.add('correct');
+                    } else if (input.checked) {
+                        label.classList.add('incorrect');
                     }
                 });
             }
 
             // عرض النتيجة
-            document.getElementById('score').textContent = `درجتك: ${totalScore} من ${totalPossibleScore}`;
-            document.getElementById('score-circle').textContent = totalScore;
+            document.getElementById('score').textContent = `درجتك: ${totalScore.toFixed(1)} من ${totalPossible}`;
+            document.getElementById('score-circle').textContent = totalScore.toFixed(1);
             document.getElementById('result').style.display = 'block';
             document.querySelector('.submit-btn').style.display = 'none';
             document.getElementById('retry-btn').style.display = 'block';
-
-            // عرض نموذج الإجابة
             document.getElementById('answers-section').style.display = 'block';
 
             // التمرير إلى النتيجة
@@ -635,7 +631,19 @@
         }
 
         function retryTest() {
-            location.reload();
+            // إزالة التصحيح البصري
+            document.querySelectorAll('.correct, .incorrect').forEach(el => {
+                el.classList.remove('correct', 'incorrect');
+            });
+
+            // إلغاء تحديد جميع الراديو
+            document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+
+            // إخفاء النتيجة ونموذج الإجابة
+            document.getElementById('result').style.display = 'none';
+            document.getElementById('answers-section').style.display = 'none';
+            document.querySelector('.submit-btn').style.display = 'block';
+            document.getElementById('retry-btn').style.display = 'none';
         }
     </script>
 </body>
