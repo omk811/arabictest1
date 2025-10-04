@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,28 +15,33 @@
             padding: 20px;
             min-height: 100vh;
         }
+
         .container {
             max-width: 900px;
             margin: 0 auto;
             background: white;
             border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             overflow: hidden;
         }
+
         .header {
             background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
             color: white;
             padding: 30px;
             text-align: center;
         }
+
         .header h1 {
             margin: 0;
             font-size: 2.5rem;
             font-weight: bold;
         }
+
         .content {
             padding: 30px;
         }
+
         .section {
             margin-bottom: 40px;
             border: 2px solid #e3f2fd;
@@ -43,6 +49,7 @@
             padding: 25px;
             background: #fafafa;
         }
+
         .section-title {
             color: #1976d2;
             font-size: 1.5rem;
@@ -51,6 +58,7 @@
             border-bottom: 3px solid #4facfe;
             padding-bottom: 10px;
         }
+
         .reading-text {
             background: #f8f9fa;
             padding: 20px;
@@ -60,6 +68,7 @@
             line-height: 1.8;
             font-size: 1.1rem;
         }
+
         .question {
             margin-bottom: 20px;
             padding: 15px;
@@ -68,15 +77,19 @@
             border: 1px solid #e0e0e0;
             transition: all 0.3s ease;
         }
+
         .question-text {
             font-weight: bold;
             color: #333;
             margin-bottom: 10px;
         }
+
         .grade {
             display: none;
         }
-        input[type="text"], textarea {
+
+        input[type="text"],
+        textarea {
             width: 100%;
             padding: 12px;
             border: 2px solid #e0e0e0;
@@ -85,17 +98,21 @@
             transition: border-color 0.3s;
             font-family: inherit;
         }
-        input[type="text"]:focus, textarea:focus {
+
+        input[type="text"]:focus,
+        textarea:focus {
             outline: none;
             border-color: #4facfe;
             box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.1);
         }
+
         .choices {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 10px;
             margin-top: 10px;
         }
+
         .choices label {
             display: flex;
             align-items: center;
@@ -109,14 +126,17 @@
             position: relative;
             gap: 10px;
         }
+
         .choices label:hover {
             background: #e3f2fd;
             border-color: #4facfe;
         }
+
         .choices input[type="radio"] {
             margin: 0;
             accent-color: #4facfe;
         }
+
         .choices label .icon {
             font-weight: bold;
             font-size: 1.3em;
@@ -125,30 +145,37 @@
             opacity: 0;
             transition: opacity 0.3s;
         }
+
         .choices label.correct {
             background: #c8e6c9 !important;
             border-color: #2e7d32 !important;
         }
+
         .choices label.correct .icon {
             opacity: 1;
             color: #2e7d32;
         }
+
         .choices label.incorrect {
             background: #ffcdd2 !important;
             border-color: #c62828 !important;
         }
+
         .choices label.incorrect .icon {
             opacity: 1;
             color: #c62828;
         }
+
         textarea {
             resize: vertical;
             min-height: 80px;
         }
+
         .poetry-section {
             background: #fff3e0;
             border: 2px solid #ff9800;
         }
+
         .poetry-text {
             background: #fafafa;
             padding: 20px;
@@ -160,11 +187,13 @@
             font-size: 1.1rem;
             text-align: right;
         }
+
         .verse {
             margin-bottom: 10px;
             padding: 5px 0;
             text-align: right;
         }
+
         .submit-btn {
             background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
             color: white;
@@ -178,10 +207,12 @@
             display: block;
             margin: 30px auto;
         }
+
         .submit-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(79, 172, 254, 0.3);
         }
+
         .retry-btn {
             background: linear-gradient(135deg, #ff9800 0%, #f44336 100%);
             color: white;
@@ -195,10 +226,12 @@
             display: none;
             margin: 10px auto;
         }
+
         .retry-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(244, 67, 54, 0.3);
         }
+
         .result {
             background: #e8f5e8;
             border: 2px solid #2e7d32;
@@ -208,6 +241,7 @@
             display: none;
             text-align: center;
         }
+
         .score {
             font-size: 2.5rem;
             font-weight: bold;
@@ -215,6 +249,7 @@
             text-align: center;
             margin-bottom: 15px;
         }
+
         .score-circle {
             width: 120px;
             height: 120px;
@@ -229,6 +264,7 @@
             margin: 0 auto 20px;
             box-shadow: 0 8px 16px rgba(46, 125, 50, 0.3);
         }
+
         .explanation {
             margin-top: 10px;
             padding: 10px;
@@ -238,12 +274,14 @@
             color: #0d47a1;
             display: none;
         }
+
         .footer {
             text-align: center;
             margin-top: 20px;
             font-weight: bold;
             color: #1976d2;
         }
+
         .whatsapp-link {
             display: block;
             text-align: center;
@@ -252,6 +290,7 @@
             text-decoration: none;
             font-weight: bold;
         }
+
         .answers-section {
             margin-top: 30px;
             padding: 20px;
@@ -260,21 +299,26 @@
             border: 2px solid #1976d2;
             display: none;
         }
+
         .answers-section h3 {
             color: #0d47a1;
             text-align: center;
             margin-bottom: 15px;
         }
+
         @media (max-width: 768px) {
             .choices {
                 grid-template-columns: 1fr;
             }
+
             .header h1 {
                 font-size: 1.8rem;
             }
+
             .content {
                 padding: 15px;
             }
+
             .score-circle {
                 width: 100px;
                 height: 100px;
@@ -283,6 +327,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="header">
@@ -290,7 +335,6 @@
             <p>للصف الخامس الأساسي – قناة الأستاذ خليل البلوشي</p>
         </div>
         <div class="content">
-
             <!-- القسم الأول: النصوص القرائية -->
             <div class="section">
                 <h2 class="section-title">📖 أولاً: النصوص القرائية</h2>
@@ -394,7 +438,6 @@
                     <div class="explanation" id="q2b-explanation">الإجابة الصحيحة: الاهتمام</div>
                 </div>
                 <div class="question" id="q2c-container">
-                    <!-- ✅ تم تعديل السؤال ليشير إلى البيت الرابع -->
                     <div class="question-text">ت- ورد في البيت الرابع موطن جمالي. اذكره؟ <span class="grade">درجة</span></div>
                     <div class="choices" id="q2c-choices">
                         <label><input type="radio" name="q2c" value="تضاد بين الرحيل والإقامة"><span class="icon"></span> تضاد بين الرحيل والإقامة</label>
@@ -435,22 +478,22 @@
                 </div>
                 <div class="question" id="q3a1-container">
                     <div class="question-text">استخرج من الفقرة: <span class="grade">نصف درجة لكل إجابة</span></div>
-                    <p>1- فعل معرب:</p>
+                    <p>1- مبتدأ مرفوع:</p>
                     <div class="choices" id="q3a1-choices">
+                        <label><input type="radio" name="q3a1" value="الحديقةُ"><span class="icon"></span> الحديقةُ</label>
                         <label><input type="radio" name="q3a1" value="يلعب"><span class="icon"></span> يلعب</label>
-                        <label><input type="radio" name="q3a1" value="الحديقة"><span class="icon"></span> الحديقة</label>
                         <label><input type="radio" name="q3a1" value="واسعة"><span class="icon"></span> واسعة</label>
                         <label><input type="radio" name="q3a1" value="فيها"><span class="icon"></span> فيها</label>
                     </div>
-                    <div class="explanation" id="q3a1-explanation">الإجابة الصحيحة: يلعب</div>
-                    <p>2- مبتدأ مرفوع:</p>
+                    <div class="explanation" id="q3a1-explanation">الإجابة الصحيحة: الحديقةُ</div>
+                    <p>2- فعل معرب:</p>
                     <div class="choices" id="q3a2-choices">
-                        <label><input type="radio" name="q3a2" value="الحديقةُ"><span class="icon"></span> الحديقةُ</label>
-                        <label><input type="radio" name="q3a2" value="بفرح"><span class="icon"></span> بفرح</label>
                         <label><input type="radio" name="q3a2" value="يلعب"><span class="icon"></span> يلعب</label>
-                        <label><input type="radio" name="q3a2" value="الأطفال"><span class="icon"></span> الأطفال</label>
+                        <label><input type="radio" name="q3a2" value="الحديقة"><span class="icon"></span> الحديقة</label>
+                        <label><input type="radio" name="q3a2" value="واسعة"><span class="icon"></span> واسعة</label>
+                        <label><input type="radio" name="q3a2" value="فيها"><span class="icon"></span> فيها</label>
                     </div>
-                    <div class="explanation" id="q3a2-explanation">الإجابة الصحيحة: الحديقةُ</div>
+                    <div class="explanation" id="q3a2-explanation">الإجابة الصحيحة: يلعب</div>
                 </div>
                 <div class="question" id="q3b-container">
                     <div class="question-text">أ- الحركات التي تكون في آخر الكلمة المعربة تسمى: <span class="grade">نصف درجة</span></div>
@@ -523,8 +566,8 @@
                 </div>
                 <div class="section">
                     <h4>📚 ثالثاً: النحو والصرف</h4>
-                    <p><strong>1-</strong> يلعب</p>
-                    <p><strong>2-</strong> الحديقةُ</p>
+                    <p><strong>1-</strong> الحديقةُ</p>
+                    <p><strong>2-</strong> يلعب</p>
                     <p><strong>3-</strong> علامات الإعراب</p>
                     <p><strong>4-</strong> مرفوعان</p>
                     <p><strong>5-</strong> خبر مرفوع وعلامة رفعه الضمة</p>
@@ -532,11 +575,11 @@
                 </div>
             </div>
 
-            <!-- ✅ رابط قناة الواتساب بدون مسافات -->
             <a href="https://whatsapp.com/channel/0029VamotBKCxoAy3fzUcv3T" class="whatsapp-link" target="_blank">
                 انضم إلى قناة الواتساب الخاصة بنا 📲
             </a>
         </div>
+
         <div class="footer">
             إعداد: الأستاذ خليل البلوشي – قناة تعليمية للصف الخامس الأساسي
         </div>
@@ -555,8 +598,8 @@
             q2c: "تضاد بين الرحيل والإقامة",
             q2d: "تاج للحمامة ورياض في تهامة",
             q2e: "أن يتقي الله ويحافظ على الأمانة",
-            q3a1: "يلعب",
-            q3a2: "الحديقةُ",
+            q3a1: "الحديقةُ",  // الإجابة الصحيحة للسؤال الأول: مبتدأ مرفوع
+            q3a2: "يلعب",    // الإجابة الصحيحة للسؤال الثاني: فعل معرب
             q3b: "علامات الإعراب",
             q3c: "مرفوعان",
             q3d: "خبر مرفوع وعلامة رفعه الضمة",
@@ -569,7 +612,7 @@
             q3a1: 0.5, q3a2: 0.5, q3b: 0.5, q3c: 0.5, q3d: 1, q3e: 1
         };
 
-        window.onload = function() {
+        window.onload = function () {
             const containers = [
                 "q1a1-choices", "q1a2-choices", "q1b-choices", "q1c-choices", "q1d-choices", "q1e-choices",
                 "q2a-choices", "q2b-choices", "q2c-choices", "q2d-choices", "q2e-choices",
@@ -598,6 +641,7 @@
 
             let totalScore = 0;
             let totalPossible = 0;
+
             for (let key in questionScores) {
                 totalPossible += questionScores[key];
                 if (answers[key] === correctAnswers[key]) {
@@ -609,12 +653,14 @@
             for (let key in correctAnswers) {
                 const container = document.getElementById(`${key}-container`);
                 if (!container) continue;
+
                 const labels = container.querySelectorAll('label');
                 labels.forEach(label => {
                     label.classList.remove('correct', 'incorrect');
                     const input = label.querySelector('input[type="radio"]');
                     const icon = label.querySelector('.icon');
                     if (!input || !icon) return;
+
                     if (input.value === correctAnswers[key]) {
                         label.classList.add('correct');
                         icon.textContent = '✅';
@@ -634,7 +680,6 @@
             document.querySelector('.submit-btn').style.display = 'none';
             document.getElementById('retry-btn').style.display = 'block';
             document.getElementById('answers-section').style.display = 'block';
-
             document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
         }
 
@@ -654,4 +699,5 @@
         }
     </script>
 </body>
+
 </html>
